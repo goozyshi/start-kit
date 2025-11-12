@@ -1,6 +1,6 @@
 {
   "name": "@goozyshi/start-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Start Kit - 零配置的页面导航与模板生成工具",
   "keywords": [
     "vite",
@@ -32,16 +32,14 @@
   "engines": {
     "node": ">=14.18.0"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "bin",
     "lib",
     "ui",
     "template",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "test": "echo \"Test not implemented yet\""
