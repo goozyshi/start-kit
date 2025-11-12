@@ -305,6 +305,47 @@ module.exports = {
 
 ---
 
+## 📦 发布到 NPM
+
+### 准备工作
+
+确认以下检查清单：
+
+```bash
+# 1. 检查依赖是否安装完整
+npm install
+
+# 2. 更新版本号（根据变更类型选择）
+npm version patch   # 修复 bug: 1.0.0 -> 1.0.1
+npm version minor   # 新增特性: 1.0.0 -> 1.1.0
+npm version major   # 破坏性变更: 1.0.0 -> 2.0.0
+
+# 3. 预览即将发布的文件
+npm pack --dry-run
+```
+
+### 发布到 NPM
+
+```bash
+# 登录 NPM（首次需要）
+npm login
+
+# 发布
+npm publish
+
+# 如果是测试包，使用
+npm publish --tag beta
+```
+
+### ⚠️ 发布注意事项
+
+- ✅ 本包采用**源码发布**，无需构建步骤
+- ✅ UI 界面由 Vite 在运行时编译，确保兼容性
+- ✅ 所有依赖（包括 Vue 和 Element Plus）已打包在内，用户无需额外安装
+- ✅ `.npmignore` 已配置，确保不发布 `.git`、`node_modules` 等
+
+---
+
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！

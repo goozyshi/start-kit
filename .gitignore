@@ -1,1 +1,6 @@
-node_modules
+node_modules/
+dist/
+*.log
+.DS_Store
+ui/dist/
+# 保留 package-lock.json 以确保依赖版本一致性
