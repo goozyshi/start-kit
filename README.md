@@ -36,13 +36,13 @@
 
 ```bash
 # 使用 npm
-npm install start-kit --save-dev
+npm install @goozyshi/start-kit --save-dev
 
 # 使用 yarn
-yarn add start-kit -D
+yarn add @goozyshi/start-kit -D
 
 # 使用 pnpm
-pnpm add start-kit -D
+pnpm add @goozyshi/start-kit -D
 ```
 
 ### 添加启动脚本
@@ -369,7 +369,7 @@ npm publish --tag beta
 ## 🔗 相关链接
 
 - 📦 [GitHub 仓库](https://github.com/goozyshi/start-kit)
-- 📮 [NPM 包](https://www.npmjs.com/package/start-kit)
+- 📮 [NPM 包](https://www.npmjs.com/package/@goozyshi/start-kit)
 - 🐛 [提交 Issue](https://github.com/goozyshi/start-kit/issues)
 - 💬 [讨论区](https://github.com/goozyshi/start-kit/discussions)
 
