@@ -1,0 +1,17 @@
+import service, { post } from "@/utils/request/service.js";
+
+/**
+ * <%= PageName %> 相关 API
+ */
+
+// TODO: 添加具体的 API 接口
+
+export const exampleApi = async (data: any) => {
+  try {
+    const res = await post<any>("/v1/example/endpoint", data);
+    return res;
+  } catch (error) {
+    console.error(error);
+  }
+};
+

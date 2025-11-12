@@ -1,0 +1,22 @@
+import { createApp } from "vue";
+import App from "./pages/App.vue";
+import router from "./router";
+import { useLang } from "@/hooks/useLang";
+import allLang from "./lang";
+import { Lazyload } from "vant";
+import "vant/lib/index.css";
+
+const app = createApp(App);
+
+import Plugins from "@/plugins";
+import Image from "@/components/Image/Image.vue";
+
+app.component("Image", Image);
+
+const { setupI18n } = useLang();
+setupI18n(app, allLang);
+
+Plugins(app);
+
+app.use(router).use(Lazyload).mount("#app");
+

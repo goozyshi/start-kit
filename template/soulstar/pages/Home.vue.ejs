@@ -1,0 +1,69 @@
+<template>
+  <div class="flex-container page-<%= pageName %>">
+    <!-- 页面标题 -->
+    <HeaderV2 class="safe-top" px32 :title="t('title')">
+      <template #right>
+        <!-- 右侧操作按钮区域 -->
+        <div class="flex-row-center gap-32">
+          <!-- TODO: 添加右侧按钮，如规则说明等 -->
+        </div>
+      </template>
+    </HeaderV2>
+
+    <!-- 滚动内容区域 -->
+    <div class="page-<%= pageName %>__content scroll-container" ref="scrollContainer">
+      <div class="content-wrapper">
+        <h1>{{ t("welcome") }}</h1>
+        <p>{{ t("description") }}</p>
+        <p>{{ t("start_building") }}</p>
+        
+        <!-- TODO: 在此添加页面内容 -->
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref, onMounted } from "vue";
+import HeaderV2 from "@/components/HeaderV2.vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+const scrollContainer = ref<HTMLElement>();
+
+// TODO: 实现页面逻辑
+
+onMounted(() => {
+  console.log("<%= PageName %> page mounted");
+});
+</script>
+
+<style lang="scss" scoped>
+.page-<%= pageName %> {
+  background-color: var(--bg-color);
+}
+
+.page-<%= pageName %>__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.32rem;
+
+  .content-wrapper {
+    h1 {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--text-color-9);
+      margin-bottom: 0.24rem;
+    }
+
+    p {
+      font-size: var(--font-size-md);
+      color: var(--text-color-6);
+      line-height: 1.5;
+    }
+  }
+}
+
+// TODO: 添加页面特定样式
+</style>
+

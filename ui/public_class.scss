@@ -1,0 +1,71 @@
+@charset 'utf-8';
+/*这些元素都建议重新初始化*/
+body,div,dl,dt,dd,ul,ol,li,tr,td,th,
+h1,h2,h3,h4,h5,h6,hr,br,img,table,
+input,form,a,p,span,textarea,i{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+//
+
+
+
+//  全屏背景
+.public_fixed_fullScreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 1;
+    // 兼容性不考虑也可以使用如下
+    // width: 100vw;
+    // height: 100vh;
+}
+// 弹窗居中显示
+.public_fixed_center{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+// 超出省略号
+.public_overflow_ellipsis{
+    overflow:hidden; //超出的文本隐藏
+    text-overflow:ellipsis; //溢出用省略号显示
+    white-space:nowrap; //溢出不换行
+}
+
+// vjList 一行 flex 横向布局
+.public_flex_lineAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.public_flex_Between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.public_flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.public_flex_left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+// X center, y flex-end
+.public_flex_cb{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}

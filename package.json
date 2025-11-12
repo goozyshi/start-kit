@@ -1,0 +1,50 @@
+{
+  "name": "start-kit",
+  "version": "1.0.0",
+  "description": "Start Kit - 零配置的页面导航与模板生成工具",
+  "keywords": [
+    "vite",
+    "vue3",
+    "start-kit",
+    "development"
+  ],
+  "author": "goozyshi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goozyshi/start-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goozyshi/start-kit/issues"
+  },
+  "homepage": "https://github.com/goozyshi/start-kit#readme",
+  "main": "lib/index.js",
+  "bin": {
+    "vite-dashboard": "./bin/cli.js",
+    "vd": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "ui",
+    "template"
+  ],
+  "scripts": {
+    "test": "echo \"Test not implemented yet\""
+  },
+  "dependencies": {
+    "vite": "^3.0.0",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "glob": "^8.1.0",
+    "fs-extra": "^10.1.0",
+    "ejs": "^3.1.9",
+    "chalk": "^4.1.2"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "element-plus": "^2.0.0"
+  }
+}
