@@ -214,10 +214,10 @@ import appTs from "./app";
 export default appTs;
 </script>
 
-<style lang="scss">
-@use "./public_class.scss";
-@use "./viteInit-style.scss";
-@use "./viteInit-animate.scss";
+<style>
+@import "./public_class.css";
+@import "./viteInit-style.css";
+@import "./viteInit-animate.css";
 
 body {
   background: linear-gradient(
@@ -236,81 +236,69 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.viteInit-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .server-status-compact {
-    display: flex;
-    align-items: center;
+.viteInit-header .server-status-compact {
+  display: flex;
+  align-items: center;
+}
 
-    :deep(.el-tag) {
-      font-size: 13px;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-weight: 500;
-      cursor: help;
-      transition: all 0.3s ease;
+.viteInit-header .server-status-compact :deep(.el-tag) {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: help;
+  transition: all 0.3s ease;
+}
 
-      &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-    }
+.viteInit-header .server-status-compact :deep(.el-tag):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-    :deep(.el-tag--success) {
-      background: linear-gradient(135deg, #67c23a 0%, #85ce61 100%);
-      border-color: #67c23a;
-    }
+.viteInit-header .server-status-compact :deep(.el-tag--success) {
+  background: linear-gradient(135deg, #67c23a 0%, #85ce61 100%);
+  border-color: #67c23a;
+}
 
-    :deep(.el-tag--warning) {
-      background: linear-gradient(135deg, #e6a23c 0%, #ebb563 100%);
-      border-color: #e6a23c;
-    }
-  }
+.viteInit-header .server-status-compact :deep(.el-tag--warning) {
+  background: linear-gradient(135deg, #e6a23c 0%, #ebb563 100%);
+  border-color: #e6a23c;
 }
 
 /* 左侧导航区域 - 创建按钮样式 */
-.catalogNavigation {
-  .create-page-action {
-    padding: 8px 12px 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 8px;
+.catalogNavigation .create-page-action {
+  padding: 8px 12px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+}
 
-    .create-button {
-      justify-content: center;
-      background: linear-gradient(
-        -45deg,
-        #67c23a 50%,
-        #85ce61 60%,
-        #67c23a 70%
-      );
-      background-size: 600% 100%;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      animation: shine 20s infinite;
-      animation-delay: 0s;
-      animation-timing-function: linear;
+.catalogNavigation .create-page-action .create-button {
+  justify-content: center;
+  background: linear-gradient(-45deg, #67c23a 50%, #85ce61 60%, #67c23a 70%);
+  background-size: 600% 100%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  animation: shine 20s infinite;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
 
-      &:hover {
-        background: linear-gradient(
-          -45deg,
-          #529b2e 50%,
-          #67c23a 60%,
-          #529b2e 70%
-        );
-        background-size: 600% 100%;
-        animation: shine 20s infinite;
-      }
+.catalogNavigation .create-page-action .create-button:hover {
+  background: linear-gradient(-45deg, #529b2e 50%, #67c23a 60%, #529b2e 70%);
+  background-size: 600% 100%;
+  animation: shine 20s infinite;
+}
 
-      span {
-        font-size: 18px;
-      }
-    }
-  }
+.catalogNavigation .create-page-action .create-button span {
+  font-size: 18px;
 }
 
 /* 表单提示样式 */

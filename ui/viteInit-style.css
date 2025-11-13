@@ -1,0 +1,228 @@
+.viteInit-content {
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(255,255,255,1);
+    margin: 40px auto 0;
+    border-radius: 20px;
+    position: relative;
+    padding-top: .01rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, .7);
+}
+
+.viteInit-content .viteInit-header img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.viteInit-content .viteInit-header span {
+    font-size: 25px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.viteInit-content .viteInit-main {
+    margin-top: 0;
+    align-items: start;
+    padding: 10px;
+}
+
+.viteInit-content .viteInit-main .catalogNavigation {
+    max-height: 65vh;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px 0 0 10px;
+    box-shadow: 0px 0px 10px rgb(74, 148, 238);
+}
+
+.viteInit-content .viteInit-main .catalogNavigation .catalog {
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+    padding: 10px 15px;
+    text-align: left;
+    background: #ffffff;
+    color:rgb(96,98,102);
+    border-radius: 50px;
+    margin: 8px;
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+    right: auto;
+}
+
+.viteInit-content .viteInit-main .catalogNavigation .catalog:hover {
+    background: rgb(236,245,255);
+    color:rgb(64,158,255);
+}
+
+.viteInit-content .viteInit-main .catalogNavigation .catalog.active {
+    background: rgb(64,158,255);
+    color: rgb(255,255,255);
+    font-weight: bold;
+    background: linear-gradient(-45deg, #2284fb 50%, #0a0e92 60%, #2e59d4 70%);
+    background-size: 600% 100%;
+    -webkit-animation: shine 20s infinite;
+    animation: shine 20s infinite;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.viteInit-content .viteInit-main .catalogNavigation .catalog img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.viteInit-content .viteInit-main .catalogContent {
+    width: 83%;
+    height: 80vh;
+    overflow-y: scroll;
+    border-radius: 25px;
+    padding: 20px;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.viteInit-content .viteInit-main .catalogContent::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+
+.viteInit-content .viteInit-main .catalogContent .catalogueContent {
+    background-color: rgba(249,250,253,.7);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px rgb(74, 148, 238);
+}
+
+/* 新加年份/常规设置 */
+.viteInit-content .viteInit-main .catalogContent .catalogueContent__main {
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+/* 新加年份/常规设置 */
+.viteInit-content .viteInit-main .catalogContent .catalog2-outerBox {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.viteInit-content .viteInit-main .catalogContent .catalog2 {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 18px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.viteInit-content .viteInit-main .catalogContent .catalog2 span {
+    color:rgb(93, 118, 169);
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.viteInit-content .viteInit-main .catalogContent .catalog2.active {
+    background: rgb(64,158,255);
+    background: linear-gradient(-45deg, #12DFCE 50%, #b1ee6c 60%, #12DFCE 70%);
+    background-size: 600% 100%;
+    -webkit-animation: shine 20s infinite;
+    animation: shine 20s infinite;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.viteInit-content .viteInit-main .catalogContent .catalog2.active span {
+    color: rgb(255,255,255);
+}
+
+.viteInit-content .viteInit-main .catalogContent hr {
+    border: 0;
+    height: .5px;
+    border: 1px rgb(64,158,255) dashed;
+    margin: 40px 0;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul {
+    height: 55vh;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 6px rgb(74, 148, 238);
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 30px;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.viteInit-content .viteInit-main .catalogContent ul::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li {
+    display: inline-block;
+    margin: 5px 10px;
+    width: 220px;
+    height: 220px;
+    overflow-y: scroll;
+    border: 1px solid rgb(64,158,255);
+    border-radius: 15px;
+    position: relative;
+    padding: 10px;
+    transition: all .5s;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li:hover {
+    background-color: #f9fafd;
+    -webkit-box-shadow: rgb(74, 148, 238) 0px 0px 10px;
+    -moz-box-shadow: rgb(74, 148, 238) 0px 0px 10px;
+    box-shadow: rgb(74, 148, 238) 0px 0px 10px;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li .lettFlag {
+    width: 220px;
+    height: 220px;
+    line-height: 220px;
+    font-size: 90px;
+    font-style: italic;
+    color: #feffff;
+    text-shadow: rgb(64,158,255) 1px 0 0, rgb(64,158,255) 0 1px 0, rgb(64,158,255) -1px 0 0, rgb(64,158,255) 0 -1px 0;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select:none;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li p {
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    color: #23558d;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.viteInit-content .viteInit-main .catalogContent ul li p:hover {
+    color:rgb(144, 200, 255);
+    text-shadow: 1px 1px 1px rgb(4, 126, 248);
+    font-weight: 500;
+}
+
+.viteInit-content h5 {
+    color: #cbbfbf;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+

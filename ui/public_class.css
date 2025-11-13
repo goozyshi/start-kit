@@ -7,11 +7,8 @@ input,form,a,p,span,textarea,i{
     margin:0;
     box-sizing: border-box;
 }
-//
 
-
-
-//  全屏背景
+/*  全屏背景 */
 .public_fixed_fullScreen{
     position: fixed;
     top: 0;
@@ -20,11 +17,12 @@ input,form,a,p,span,textarea,i{
     bottom: 0;
     background-color: black;
     z-index: 1;
-    // 兼容性不考虑也可以使用如下
-    // width: 100vw;
-    // height: 100vh;
+    /* 兼容性不考虑也可以使用如下 */
+    /* width: 100vw; */
+    /* height: 100vh; */
 }
-// 弹窗居中显示
+
+/* 弹窗居中显示 */
 .public_fixed_center{
     position: fixed;
     top: 0;
@@ -35,14 +33,14 @@ input,form,a,p,span,textarea,i{
     z-index: 2;
 }
 
-// 超出省略号
+/* 超出省略号 */
 .public_overflow_ellipsis{
-    overflow:hidden; //超出的文本隐藏
-    text-overflow:ellipsis; //溢出用省略号显示
-    white-space:nowrap; //溢出不换行
+    overflow:hidden; /*超出的文本隐藏*/
+    text-overflow:ellipsis; /*溢出用省略号显示*/
+    white-space:nowrap; /*溢出不换行*/
 }
 
-// vjList 一行 flex 横向布局
+/* vjList 一行 flex 横向布局 */
 .public_flex_lineAround{
     display: flex;
     justify-content: space-around;
@@ -63,9 +61,11 @@ input,form,a,p,span,textarea,i{
     justify-content: left;
     align-items: center;
 }
-// X center, y flex-end
+/* X center, y flex-end */
 .public_flex_cb{
     display: flex;
     justify-content: left;
     align-items: flex-end;
 }
+
+

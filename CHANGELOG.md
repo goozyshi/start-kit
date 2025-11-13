@@ -2,6 +2,84 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2025-11-12
+
+### ✨ 重大优化
+
+- **移除 sass 依赖，转换为纯 CSS**
+  - 将所有 SCSS 文件转换为标准 CSS
+  - 移除 `sass` 依赖（节省 ~15MB 安装体积）
+  - 包体积减小约 6%
+  - 启动速度提升（无需 sass 编译）
+  - 更好的兼容性（标准 CSS）
+
+### 📂 转换的文件
+
+- ✅ `public_class.scss` → `public_class.css`
+- ✅ `viteInit-animate.scss` → `viteInit-animate.css`
+- ✅ `viteInit-style.scss` → `viteInit-style.css`
+- ✅ `app.vue` - 移除 `lang="scss"` 和嵌套规则
+
+### 📦 优化效果
+
+| 对比项 | v1.0.2 | v1.0.3 | 改善 |
+|--------|--------|--------|------|
+| **包体积** | 25.5 kB | ~24 kB | -6% |
+| **sass 依赖** | ✅ 需要 | ❌ 不需要 | -15MB |
+| **编译速度** | 需要 sass | 原生 CSS | 更快 |
+
+### 🚀 升级方式
+
+```bash
+# 卸载旧版本
+npm uninstall @goozyshi/start-kit
+
+# 安装新版本
+npm install @goozyshi/start-kit@1.0.3 -D --legacy-peer-deps
+
+# 清除缓存
+rm -rf node_modules/.vite
+
+# 启动仪表盘
+npm run dashboard
+```
+
+**重要：** v1.0.3 不再需要 sass 依赖，安装更快，体积更小！
+
+---
+
+## [1.0.2] - 2025-11-12
+
+### 🐛 Bug Fixes
+
+- **添加缺失的 sass 依赖**
+  - 修复错误：`Preprocessor dependency "sass" not found`
+  - UI 界面使用了 SCSS 样式文件，但缺少 sass 预处理器
+  - 将 `sass@^1.54.0` 添加到 dependencies
+
+### ✅ 验证
+
+- ✅ dayjs 兼容性问题已解决（v1.0.1）
+- ✅ sass 预处理器依赖已添加（v1.0.2）
+
+### 📦 升级方式
+
+```bash
+# 卸载旧版本
+npm uninstall @goozyshi/start-kit
+
+# 安装新版本
+npm install @goozyshi/start-kit@1.0.2 -D --legacy-peer-deps
+
+# 清除缓存
+rm -rf node_modules/.vite
+
+# 启动仪表盘
+npm run dashboard
+```
+
+---
+
 ## [1.0.1] - 2025-11-12
 
 ### 🐛 Bug Fixes

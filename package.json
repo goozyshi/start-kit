@@ -1,6 +1,6 @@
 {
   "name": "@goozyshi/start-kit",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Start Kit - 零配置的页面导航与模板生成工具",
   "keywords": [
     "vite",
@@ -45,13 +45,13 @@
     "test": "echo \"Test not implemented yet\""
   },
   "dependencies": {
-    "vite": "^3.0.0",
     "@vitejs/plugin-vue": "^3.0.0",
-    "vue": "^3.2.0",
-    "element-plus": "^2.0.0",
-    "glob": "^8.1.0",
-    "fs-extra": "^10.1.0",
+    "chalk": "^4.1.2",
     "ejs": "^3.1.9",
-    "chalk": "^4.1.2"
+    "element-plus": "^2.0.0",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.1.0",
+    "vite": "^3.0.0",
+    "vue": "^3.2.0"
   }
 }
