@@ -54,7 +54,7 @@ pnpm add start-kit -D
 ```json
 {
   "scripts": {
-    "dashboard": "vite-dashboard"
+    "dashboard": "start-kit"
   }
 }
 ```
@@ -77,11 +77,10 @@ npm run dashboard
 
 ### CLI 命令
 
-Start Kit 提供了两个便捷命令：
+Start Kit 命令：
 
 ```bash
-vite-dashboard [options]   # 完整命令
-vd [options]               # 简写别名
+start-kit [options]   # 启动仪表盘
 ```
 
 **可用选项：**
@@ -97,16 +96,16 @@ vd [options]               # 简写别名
 
 ```bash
 # 使用默认配置启动
-vite-dashboard
+start-kit
 
 # 指定端口
-vite-dashboard --port 3000
+start-kit --port 3000
 
 # 不自动打开浏览器
-vite-dashboard --no-open
+start-kit --no-open
 
-# 使用简写 + 自定义端口
-vd --port 9000
+# 指定端口并静默启动
+start-kit --port 9000 --no-open
 ```
 
 ### 同时启动仪表盘和开发服务器
@@ -117,7 +116,7 @@ vd --port 9000
 {
   "scripts": {
     "dev": "vite",
-    "dashboard": "vite-dashboard",
+    "dashboard": "start-kit",
     "dev:all": "npm run dashboard & npm run dev"
   }
 }

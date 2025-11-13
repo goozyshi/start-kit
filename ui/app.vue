@@ -282,7 +282,12 @@ body {
 
 .catalogNavigation .create-page-action .create-button {
   justify-content: center;
-  background: linear-gradient(-45deg, #67c23a 50%, #85ce61 60%, #67c23a 70%);
+  background: linear-gradient(
+    -45deg,
+    #67c23a 50%,
+    #85ce61 60%,
+    #67c23a 70%
+  );
   background-size: 600% 100%;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -292,7 +297,12 @@ body {
 }
 
 .catalogNavigation .create-page-action .create-button:hover {
-  background: linear-gradient(-45deg, #529b2e 50%, #67c23a 60%, #529b2e 70%);
+  background: linear-gradient(
+    -45deg,
+    #529b2e 50%,
+    #67c23a 60%,
+    #529b2e 70%
+  );
   background-size: 600% 100%;
   animation: shine 20s infinite;
 }

@@ -31,11 +31,11 @@ if (args.includes("--help") || args.includes("-h")) {
   console.log(
     chalk.cyan(`
 ╔═══════════════════════════════════════════╗
-║      Vite Start Kit                       ║
+║         Start Kit                         ║
 ╚═══════════════════════════════════════════╝
 
 使用方法:
-  vite-dashboard [options]
+  start-kit [options]
 
 选项:
   --port <port>    指定端口号 (默认: 8080)
@@ -44,9 +44,9 @@ if (args.includes("--help") || args.includes("-h")) {
   --version, -v    显示版本号
 
 示例:
-  vite-dashboard
-  vite-dashboard --port 3000
-  vite-dashboard --no-open
+  start-kit
+  start-kit --port 3000
+  start-kit --no-open
 `)
   );
   process.exit(0);

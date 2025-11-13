@@ -26,8 +26,7 @@
   "homepage": "https://github.com/goozyshi/start-kit#readme",
   "main": "lib/index.js",
   "bin": {
-    "vite-dashboard": "./bin/cli.js",
-    "vd": "./bin/cli.js"
+    "start-kit": "./bin/cli.js"
   },
   "engines": {
     "node": ">=14.18.0"
