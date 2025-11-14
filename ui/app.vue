@@ -1,15 +1,5 @@
 <template>
   <div class="viteInit-content">
-    <!-- Loading 遮罩层 -->
-    <div v-if="isLoading" class="loading-overlay">
-      <div class="loading-content">
-        <div class="loading-spinner">
-          <div class="spinner"></div>
-        </div>
-        <div class="loading-text">{{ loadingText }}</div>
-      </div>
-    </div>
-
     <!-- 顶部标题栏 -->
     <div class="viteInit-header public_flex_left">
       <div class="header-left">
@@ -340,70 +330,5 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 0 4px;
   display: inline-block;
-}
-
-/* Loading 遮罩层样式 */
-.loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    270deg,
-    rgba(187, 16, 143, 0.95) 0%,
-    rgba(0, 153, 117, 0.95) 50%,
-    rgba(93, 0, 175, 0.95) 99%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(10px);
-}
-
-.loading-content {
-  text-align: center;
-  color: white;
-}
-
-.loading-spinner {
-  margin-bottom: 20px;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
 }
 </style>

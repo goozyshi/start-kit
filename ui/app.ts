@@ -32,10 +32,6 @@ export default defineComponent({
     ElTooltip,
   },
   setup() {
-    // Loading 状态
-    const isLoading = ref(true);
-    const loadingText = ref("正在加载页面数据...");
-
     // 响应式数据
     const data = ref<string[]>([]);
     const pageTree = ref({});
@@ -109,54 +105,32 @@ export default defineComponent({
 
     // 初始化
     const init = async () => {
-      try {
-        isLoading.value = true;
-        loadingText.value = "正在加载页面数据...";
+      // 先加载页面数据
+      await loadPages();
+      if (reactCatalog1.length === 0) return;
 
-        // 先加载页面数据
-        await loadPages();
-        
-        if (reactCatalog1.length === 0) {
-          loadingText.value = "未找到页面";
-          return;
+      // 确保二三级目录和字母分类数组被清空（防止重复调用时累加）
+      reactCatalog2.length = 0;
+      reactCatalog3.length = 0;
+      reactCatalogueArray.length = 0;
+
+      refCurr1.value = reactCatalog1[0];
+      let temp = Object.keys(catalog[refCurr1.value]);
+
+      reactCatalog2.push(...temp);
+      reactCatalog2.sort();
+
+      if (reactCatalog2.length > 0) {
+        await funcResortAnalysis(reactCatalog2);
+        refCataLogueIndex.value = reactCatalogueArray.length - 1;
+        let refRcaLength =
+          reactCatalogueArray[refCataLogueIndex.value]?.fileName;
+        if (refRcaLength && refRcaLength.length > 0) {
+          refCurr2.value = refRcaLength[0];
+          reactCatalog3.push(...catalog[refCurr1.value][refCurr2.value]);
+          refCurr3.value = reactCatalog3[0];
+          computedCatalog3();
         }
-
-        loadingText.value = "正在构建目录结构...";
-
-        // 确保二三级目录和字母分类数组被清空（防止重复调用时累加）
-        reactCatalog2.length = 0;
-        reactCatalog3.length = 0;
-        reactCatalogueArray.length = 0;
-
-        refCurr1.value = reactCatalog1[0];
-        let temp = Object.keys(catalog[refCurr1.value]);
-
-        reactCatalog2.push(...temp);
-        reactCatalog2.sort();
-
-        if (reactCatalog2.length > 0) {
-          await funcResortAnalysis(reactCatalog2);
-          refCataLogueIndex.value = reactCatalogueArray.length - 1;
-          let refRcaLength =
-            reactCatalogueArray[refCataLogueIndex.value]?.fileName;
-          if (refRcaLength && refRcaLength.length > 0) {
-            refCurr2.value = refRcaLength[0];
-            reactCatalog3.push(...catalog[refCurr1.value][refCurr2.value]);
-            refCurr3.value = reactCatalog3[0];
-            computedCatalog3();
-          }
-        }
-
-        loadingText.value = "加载完成！";
-      } catch (err) {
-        console.error("❌ 初始化失败:", err);
-        ElMessage.error(`初始化失败: ${err.message}`);
-        loadingText.value = "加载失败";
-      } finally {
-        // 延迟关闭 loading，确保用户能看到"加载完成"状态
-        setTimeout(() => {
-          isLoading.value = false;
-        }, 300);
       }
     };
 
@@ -401,17 +375,10 @@ export default defineComponent({
       }
     };
 
-    // 启动初始化（使用立即执行的异步函数）
-    (async () => {
-      await init();
-      startServerCheck();
-    })();
+    init();
+    startServerCheck();
 
     return {
-      // Loading 状态
-      isLoading,
-      loadingText,
-      // 目录数据
       refCurr1,
       refCurr2,
       refCurr3,
