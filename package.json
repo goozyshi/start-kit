@@ -1,6 +1,6 @@
 {
   "name": "@goozyshi/start-kit",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Start Kit - 零配置的页面导航与模板生成工具",
   "keywords": [
     "vite",
